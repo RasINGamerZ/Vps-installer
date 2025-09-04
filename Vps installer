@@ -1,0 +1,74 @@
+#!/bin/bash
+
+clear
+
+# Colors
+RED='\033[0;31m'
+GRN='\033[0;32m'
+CYN='\033[0;36m'
+YEL='\033[1;33m'
+NC='\033[0m' # No Color
+
+# ASCII Art Banner
+echo -e "${YEL}"
+cat << "EOF"
+__________    ________ 
+          _____                            _____          
+         /\    \                          /\    \         
+        /::\    \                        /::\    \        
+       /::::\    \                      /::::\    \       
+      /::::::\    \                    /::::::\    \      
+     /:::/\:::\    \                  /:::/\:::\    \     
+    /:::/__\:::\    \                /:::/  \:::\    \    
+   /::::\   \:::\    \              /:::/    \:::\    \   
+  /::::::\   \:::\    \            /:::/    / \:::\    \  
+ /:::/\:::\   \:::\____\          /:::/    /   \:::\ ___\ 
+/:::/  \:::\   \:::|    |        /:::/____/  ___\:::|    |
+\::/   |::::\  /:::|____|        \:::\    \ /\  /:::|____|
+ \/____|:::::\/:::/    /          \:::\    /::\ \::/    / 
+       |:::::::::/    /            \:::\   \:::\ \/____/  
+       |::|\::::/    /              \:::\   \:::\____\    
+       |::| \::/____/                \:::\  /:::/    /    
+       |::|  ~|                       \:::\/:::/    /     
+       |::|   |                        \::::::/    /      
+       \::|   |                         \::::/    /       
+        \:|   |                          \::/____/        
+         \|___|                                        
+EOF
+echo -e "${NC}"
+
+# Subscribe animation
+echo -ne "${GRN}🔥 Please Subscribe \n"
+for i in {1..3}; do
+  echo -ne "${CYN}Subscribing To RasINGamerZ"
+  for dot in {1..3}; do
+    echo -n "."
+    sleep 0.3
+  done
+  echo -ne "\r                     \r"
+done
+echo -e "${GRN} Thanks for Subscribing! If Not Do It Rn${NC}\n"
+sleep 1
+
+
+#!/bin/bash
+
+# Update and upgrade the system
+echo "Updating package list..."
+apt update -y
+echo "Upgrading packages..."
+apt upgrade -y
+
+# Install Docker Compose
+echo "Installing Docker Compose..."
+apt install docker-compose -y
+
+# Install Neofetch
+echo "Installing Neofetch..."
+apt install neofetch -y
+
+# Run Neofetch to display system information
+echo "Running Neofetch..."
+neofetch
+
+echo "All tasks completed successfully!"

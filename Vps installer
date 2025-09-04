@@ -55,7 +55,7 @@ sleep 1
 
 # Update and upgrade the system
 echo "Updating package list..."
-sudo apt update -y
+sudo apt update 
 echo "Upgrading packages..."
 sudo apt upgrade -y
 

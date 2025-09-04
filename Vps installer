@@ -55,17 +55,17 @@ sleep 1
 
 # Update and upgrade the system
 echo "Updating package list..."
-apt update -y
+sudo apt update -y
 echo "Upgrading packages..."
-apt upgrade -y
+sudo apt upgrade -y
 
 # Install Docker Compose
 echo "Installing Docker Compose..."
-apt install docker-compose -y
+sudo apt install docker-compose -y
 
 # Install Neofetch
 echo "Installing Neofetch..."
-apt install neofetch -y
+sudo apt install neofetch -y
 
 # Run Neofetch to display system information
 echo "Running Neofetch..."
